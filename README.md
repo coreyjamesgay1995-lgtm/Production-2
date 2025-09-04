@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -119,3 +120,21 @@ function updateTimer(){
   const s = Math.floor(diff/1000)%60;
   document.getElementById('days').textContent=d;
   document.getElementById('hours').textContent=h;
+  document.getElementById('minutes').textContent=m;
+  document.getElementById('seconds').textContent=s;
+}
+sobrietyDateInput.addEventListener('change', updateTimer);
+setInterval(updateTimer, 1000);
+
+function shareSobriety(){
+  alert(`I've been sober since ${sobrietyDateInput.value}`);
+}
+
+// Placeholder functions for other features
+function saveJournal(){ alert('Journal saved!'); }
+function checkHabits(){ alert('Habits completed!'); }
+function nextQuote(){ document.getElementById('quote').textContent='Keep pushing forward!'; }
+function nextVerse(){ document.getElementById('verse').textContent='Philippians 4:13 - I can do all things through Christ who strengthens me.'; }
+</script>
+</body>
+</html>
